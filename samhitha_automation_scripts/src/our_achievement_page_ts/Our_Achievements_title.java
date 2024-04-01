@@ -2,6 +2,7 @@ package our_achievement_page_ts;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -18,6 +19,8 @@ public class Our_Achievements_title {
 		//open the browser
 		WebDriver driver = new ChromeDriver();
 		//open the webpage
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		try
 		{
 		driver.get("https://samhithasoftware.com/our-achievements/");
